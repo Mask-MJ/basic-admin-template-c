@@ -5,7 +5,7 @@ import type {
   CommonPluginOptions,
   ConditionPlugin,
   LibraryPluginOptions,
-} from '../typing';
+} from '../typing.ts';
 
 import viteVueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 import viteVue from '@vitejs/plugin-vue';

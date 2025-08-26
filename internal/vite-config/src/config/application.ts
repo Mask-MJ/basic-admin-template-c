@@ -16,7 +16,7 @@ import { getCommonConfig } from './common';
 function defineApplicationConfig(userConfigPromise?: DefineApplicationOptions) {
   return defineConfig(async (config) => {
     const options = await userConfigPromise?.(config);
-    const { appTitle, base, port, ...envConfig } = await loadAndConvertEnv();
+    const { base, port, ...envConfig } = await loadAndConvertEnv();
     const { command, mode } = config;
     const { application = {}, vite = {} } = options || {};
     const root = process.cwd();
@@ -38,15 +38,10 @@ function defineApplicationConfig(userConfigPromise?: DefineApplicationOptions) {
       isBuild,
       license: true,
       mode,
-      nitroMock: !isBuild,
-      nitroMockOptions: {},
       print: !isBuild,
       printInfoMap: {
         'Saas Admin Docs': 'https://doc.mask.cn',
       },
-      pwa: true,
-      pwaOptions: getDefaultPwaOptions(appTitle),
-      vxeTableLazyImport: true,
       ...envConfig,
       ...application,
     });
@@ -112,7 +107,6 @@ function createCssOptions(injectGlobalScss = true): CSSOptions {
               }
               return content;
             },
-            api: 'modern',
             importers: [new NodePackageImporter()],
           },
         }
