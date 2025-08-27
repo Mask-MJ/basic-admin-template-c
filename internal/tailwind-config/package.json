@@ -1,6 +1,6 @@
 {
   "name": "@saas/tailwind-config",
-  "version": "5.5.9",
+  "version": "2.0.0",
   "private": true,
   "homepage": "https://github.com/mask-mj/basic-admin-template",
   "bugs": "https://github.com/mask-mj/basic-admin-template/issues",

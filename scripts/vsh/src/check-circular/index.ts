@@ -17,8 +17,8 @@ const DEFAULT_CONFIG = {
     'scripts',
     'internal',
     'packages/effects/request/src/',
-    'packages/@core/ui-kit/menu-ui/src/',
-    'packages/@core/ui-kit/popup-ui/src/',
+    'packages/core/ui-kit/menu-ui/src/',
+    'packages/core/ui-kit/popup-ui/src/',
   ],
   threshold: 0, // 循环依赖的阈值
 } as const;
@@ -66,7 +66,11 @@ function formatCircles(circles: CircularDependencyResult[]): void {
  * @param options.config - 自定义配置
  * @returns Promise<void>
  */
-async function checkCircular({ config = {}, staged, verbose }: CommandOptions): Promise<void> {
+async function checkCircular({
+  config = {},
+  staged,
+  verbose,
+}: CommandOptions): Promise<void> {
   try {
     // 合并配置
     const finalConfig = {
@@ -123,12 +127,14 @@ async function checkCircular({ config = {}, staged, verbose }: CommandOptions): 
 
     // 如果发现循环依赖，只输出警告信息
     if (results.length > 0) {
-      console.log('\n⚠️ Warning: Circular dependencies found, please check and fix');
+      console.log(
+        '\n⚠️ Warning: Circular dependencies found, please check and fix',
+      );
     }
   } catch (error) {
     console.error(
       '❌ Error checking circular dependencies:',
-      error instanceof Error ? error.message : error
+      error instanceof Error ? error.message : error,
     );
   }
 }

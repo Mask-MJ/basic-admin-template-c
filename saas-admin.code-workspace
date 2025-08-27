@@ -29,6 +29,22 @@
       "path": "internal/vite-config",
     },
     {
+      "name": "@saas-core/design",
+      "path": "packages/core/base/design",
+    },
+    {
+      "name": "@saas-core/shared",
+      "path": "packages/core/base/shared",
+    },
+    {
+      "name": "@saas-core/typings",
+      "path": "packages/core/base/typings",
+    },
+    {
+      "name": "@saas-core/composables",
+      "path": "packages/core/composables",
+    },
+    {
       "name": "@saas/styles",
       "path": "packages/styles",
     },
