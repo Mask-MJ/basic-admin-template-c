@@ -2,7 +2,6 @@ import type { Config } from 'tailwindcss';
 
 import path from 'node:path';
 
-import { addDynamicIconSelectors } from '@iconify/tailwind4';
 import { getPackagesSync } from '@manypkg/get-packages';
 import typographyPlugin from '@tailwindcss/typography';
 
@@ -118,11 +117,11 @@ export default {
   content: [
     './index.html',
     ...tailwindPackages.map((item) =>
-      path.join(item, 'src/**/*.{vue,js,ts,jsx,tsx,svelte,astro,html}')
+      path.join(item, 'src/**/*.{vue,js,ts,jsx,tsx,svelte,astro,html}'),
     ),
   ],
   darkMode: 'selector',
-  plugins: [typographyPlugin, addDynamicIconSelectors(), enterAnimationPlugin],
+  plugins: [typographyPlugin, enterAnimationPlugin],
   prefix: '',
   theme: {
     container: {
