@@ -1,6 +1,6 @@
 {
   "name": "@saas-core/shared",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "homepage": "https://github.com/mask-mj/basic-admin-template",
   "bugs": "https://github.com/mask-mj/basic-admin-template/issues",
   "repository": {
@@ -59,10 +59,6 @@
         "types": "./dist/color/index.d.ts",
         "default": "./dist/color/index.mjs"
       },
-      "./cache": {
-        "types": "./dist/cache/index.d.ts",
-        "default": "./dist/cache/index.mjs"
-      },
       "./store": {
         "types": "./dist/store.d.ts",
         "default": "./dist/store.mjs"
@@ -75,16 +71,15 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "catalog:",
+    "@tanstack/vue-store": "catalog:",
     "clsx": "catalog:",
     "dayjs": "catalog:",
     "defu": "catalog:",
     "lodash-es": "catalog:",
-    "nprogress": "catalog:",
     "tailwind-merge": "catalog:",
     "theme-colors": "catalog:"
   },
   "devDependencies": {
-    "@types/lodash-es": "catalog:",
-    "@types/nprogress": "catalog:"
+    "@types/lodash-es": "catalog:"
   }
 }

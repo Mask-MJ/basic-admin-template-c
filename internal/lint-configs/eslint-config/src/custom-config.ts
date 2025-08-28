@@ -71,7 +71,7 @@ const customConfig: Linter.Config[] = [
     },
   },
   {
-    // @core内部组件，不能引入@saas/* 里面的包
+    // core内部组件，不能引入@saas/* 里面的包
     files: ['packages/core/**/**'],
     ignores: restrictedImportIgnores,
     rules: {

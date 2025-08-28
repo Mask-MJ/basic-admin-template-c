@@ -33,6 +33,10 @@
       "path": "packages/core/base/design",
     },
     {
+      "name": "@saas-core/icons",
+      "path": "packages/core/base/icons",
+    },
+    {
       "name": "@saas-core/shared",
       "path": "packages/core/base/shared",
     },
@@ -43,6 +47,18 @@
     {
       "name": "@saas-core/composables",
       "path": "packages/core/composables",
+    },
+    {
+      "name": "@saas-core/preferences",
+      "path": "packages/core/preferences",
+    },
+    {
+      "name": "@saas-core/form-ui",
+      "path": "packages/core/ui-kit/form-ui",
+    },
+    {
+      "name": "@saas-core/shadcn-ui",
+      "path": "packages/core/ui-kit/shadcn-ui",
     },
     {
       "name": "@saas/styles",
